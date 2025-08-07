@@ -2,28 +2,36 @@ import React from 'react';
 import Carousel from '../components/Carousel';
 import Introduction from '../components/Introduction';
 import Stats from '../components/Stats';
+import Projects from '../components/Projects';
 
 const slides = [
   {
     image: 'https://picsum.photos/1920/1080?random=1',
-    title: 'Notre Vision',
-    description: 'Façonner l\'avenir à travers des projets innovants et durables',
+    title: 'Play to Sky',
+    description: 'Agence de marketing digital innovante, transformant la présence en ligne des entreprises avec des stratégies créatives et performantes',
     buttonText: 'Découvrir',
-    buttonLink: '/vision'
+    buttonLink: '/play-to-sky'
   },
   {
     image: 'https://picsum.photos/1920/1080?random=2',
-    title: 'Nos Projets Phares',
-    description: 'Des investissements stratégiques qui transforment les industries',
+    title: 'Aurom Group',
+    description: 'Leader dans le secteur automobile : vente, achat et location de véhicules premium avec un service d\'excellence',
     buttonText: 'Explorer',
-    buttonLink: '/projects'
+    buttonLink: '/aurom-group'
   },
   {
     image: 'https://picsum.photos/1920/1080?random=3',
-    title: 'Leadership',
-    description: 'Robbin James Agoh - Fondateur & CEO de RJA GROUP',
+    title: 'Grega Open Door',
+    description: 'Expert en gestion locative et chasse immobilière, offrant des solutions personnalisées pour votre patrimoine immobilier',
     buttonText: 'En savoir plus',
-    buttonLink: '/about'
+    buttonLink: '/grega-open-door'
+  },
+  {
+    image: 'https://picsum.photos/1920/1080?random=4',
+    title: 'RJA GROUP',
+    description: 'Holding d\'investissement dirigée par Robbin James Agoh, façonnant l\'avenir à travers des projets innovants',
+    buttonText: 'Notre Vision',
+    buttonLink: '/vision'
   }
 ];
 
@@ -35,6 +43,7 @@ const Home: React.FC = () => {
       </div>
       <Introduction />
       <Stats />
+      <Projects />
     </main>
   );
 };
