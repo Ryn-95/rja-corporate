@@ -1,12 +1,13 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import { ProfileBar } from '../components/ui/ProfileBar';
 
 const heroStats = {
   founder: {
-    label: 'Fondateur & CEO',
+    label: '👑 Fondateur & CEO',
     value: 'ROBBIN JAMES AGOH',
-    icon: '👑'
+    icon: ''
   },
   group: {
     label: 'Groupe',
@@ -22,8 +23,17 @@ const heroStats = {
     label: 'Siège Social',
     value: 'PARIS',
     subtext: 'France'
+  },
+  sector: {
+    label: 'Secteur',
+    value: 'HOLDING',
+    subtext: ''
+  },
+  status: {
+    label: 'Statut*',
+    value: 'ACTIF',
+    subtext: ''
   }
-
 };
 
 const HomePage = () => {
@@ -31,8 +41,8 @@ const HomePage = () => {
   const parallaxY = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
   const navigate = useNavigate();
 
-  return (
-    <>
+      return (
+    <div className="pb-24">
       {/* Hero Section */}
       <section className="relative min-h-screen">
         <motion.div
@@ -52,106 +62,126 @@ const HomePage = () => {
 
         {/* Pas de contenu au centre pour un design plus épuré */}
 
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent">
-          <div className="container mx-auto px-8 py-12">
-            <motion.div
-              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.1 }}
-            >
-              {Object.entries(heroStats).map(([key, stat]) => (
-                <div key={key} className="text-white">
-                  <div className="text-white/60 text-sm mb-2 flex items-center gap-2">
-                    {stat.icon && <span>{stat.icon}</span>}
-                    {stat.label}
-                  </div>
-                  <div className="text-xl font-medium mb-1">{stat.value}</div>
-                  {stat.subtext && (
-                    <div className="text-sm text-white/80">{stat.subtext}</div>
-                  )}
-                </div>
-              ))}
-            </motion.div>
-          </div>
+        <div className="absolute bottom-0 left-0 right-0">
+          <ProfileBar data={heroStats} />
         </div>
       </section>
 
-      {/* Vision Section */}
-      <section className="py-32 overflow-hidden">
-        <div className="container">
+      {/* About Us Section - Style Ultima Capital */}
+      <section className="py-24 bg-white">
+        <div className="container max-w-4xl mx-auto">
           <motion.div
-            className="max-w-3xl"
-            initial={{ opacity: 0, y: 20 }}
+            className="text-center"
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
           >
-            <h2 className="text-title mb-12">Notre Vision</h2>
-            <p className="text-2xl leading-relaxed mb-8">
-              AAIC est une société de participation qui détient et développe ses activités à travers deux filiales principales ROBBBIN JAMES HOLDINGS COMPANY et AID HOLDINGS.
-            </p>
-            <p className="text-2xl leading-relaxed mb-8">
-              ROBBIN JAMES HOLDINGS COMPANY est une société qui possède et gère ses filiales à travers le monde, en accompagnant leur croissance et leur expansion internationale.
-            </p>
-            <p className="text-2xl leading-relaxed mb-8">
-              AID HOLDINGS, quant à elle, est une société tournée vers le développement de ses filiales et de ses groupes principalement centrés sur le continent africain.
-            </p>
-            <p className="text-2xl leading-relaxed">
-              À travers ces deux pôles, AAIC s'impose comme un acteur stratégique, avec la volonté de bâtir un groupe solide, international et durable, contribuant à la croissance économique aussi bien en Afrique que dans le reste du monde.
-            </p>
+            <h2 className="text-5xl font-light mb-16 text-black" style={{ fontFamily: 'serif' }}>
+              About Us
+            </h2>
+            <div className="space-y-8 text-lg leading-relaxed text-gray-700">
+              <p className="text-xl font-light">
+                Une société de participation suisse spécialisée dans le développement et la gestion d'un portefeuille diversifié d'actifs de haute qualité dans des secteurs stratégiques.
+              </p>
+              <p className="font-light">
+                Nos activités commerciales comprennent la détention directe ou indirecte à long terme d'entreprises de prestige, situées en Europe, en Afrique et dans le monde entier. Nos filiales exclusives sont destinées principalement aux investisseurs institutionnels et aux entreprises de premier plan.
+              </p>
+              <p className="font-light">
+                RJA GROUP est une holding cotée sur les marchés financiers suisses, avec une approche axée sur l'excellence opérationnelle et la croissance durable.
+              </p>
+            </div>
+            <motion.div
+              className="mt-12"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+            >
+              <button className="bg-black text-white px-8 py-3 text-sm font-light tracking-wide hover:bg-gray-800 transition-colors duration-300">
+                Explore More
+              </button>
+            </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* Portfolio Section */}
-      <section className="py-32 bg-gray-50">
-        <div className="container">
-          <motion.h2 
-            className="text-title text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
+      {/* Properties Section - Style Ultima Capital */}
+      <section className="py-24 bg-gray-50">
+        <div className="container max-w-7xl mx-auto">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            Projets Phares
-          </motion.h2>
-          <div className="grid grid-cols-2 gap-8">
-                          {[
+            <h2 className="text-4xl font-light mb-8 text-black" style={{ fontFamily: 'serif' }}>
+              Our Portfolio
+            </h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            {[
               {
-                title: 'Robbin James Holding',
-                description: 'Société qui possède et gère ses filiales à travers le monde, en accompagnant leur croissance et leur expansion internationale',
+                title: 'Robbin James Holding Company',
+                subtitle: 'Société qui possède et gère ses filiales à travers le monde, en accompagnant leur croissance et leur expansion internationale',
                 image: '/images/Robbinjamesholdingcompany.jpeg',
                 link: '/robbin-james-holding'
               },
               {
                 title: 'AID Holdings',
-                description: 'Société tournée vers le développement de ses filiales et de ses groupes principalement centrés sur le continent africain',
+                subtitle: 'Société tournée vers le développement de ses filiales et de ses groupes principalement centrés sur le continent africain',
                 image: '/images/AIDholding.jpeg',
                 link: '/aid-holdings'
+              },
+              {
+                title: 'PRESTIGE SECURITE',
+                subtitle: 'Solutions de sécurité premium pour clients institutionnels et privés de haut standing',
+                image: '/images/aaic.jpeg',
+                link: '/prestige-securite'
               }
             ].map((project, index) => (
               <motion.div
                 key={project.title}
                 className="group cursor-pointer"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                transition={{ delay: index * 0.1, duration: 0.6 }}
                 onClick={() => navigate(project.link)}
               >
-                <div className="relative aspect-[4/3] overflow-hidden mb-6">
+                <div className="relative aspect-[4/3] overflow-hidden mb-6 bg-gray-200">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-102"
                   />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-200" />
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-all duration-300" />
                 </div>
-                <h3 className="text-2xl mb-4">{project.title}</h3>
-                <p className="text-muted">{project.description}</p>
+                
+                <div className="space-y-4">
+                  <h3 className="text-xl font-light text-black group-hover:text-gray-600 transition-colors duration-300">
+                    {project.title}
+                  </h3>
+                  <p className="text-sm font-light text-gray-600 leading-relaxed">
+                    {project.subtitle}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </div>
+
+          <motion.div
+            className="text-center mt-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+          >
+            <button className="bg-black text-white px-8 py-3 text-sm font-light tracking-wide hover:bg-gray-800 transition-colors duration-300">
+              Explore More
+            </button>
+          </motion.div>
         </div>
       </section>
 
@@ -204,6 +234,42 @@ const HomePage = () => {
                 </div>
               </div>
             </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* RJA Collection Signature Service - Style Ultima */}
+      <section className="py-24 bg-white">
+        <div className="container max-w-6xl mx-auto">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-light mb-8 text-black" style={{ fontFamily: 'serif' }}>
+              RJA Collection Signature<br />Service
+            </h2>
+          </motion.div>
+
+          <motion.div
+            className="max-w-4xl mx-auto space-y-8 text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
+            <p className="text-lg font-light text-gray-700 leading-relaxed">
+              RJA GROUP SA acquiert et fournit des services de participation de haut niveau qui constituent une alternative aux investissements traditionnels et se caractérisent généralement par un niveau de confidentialité plus élevé, une proposition de service sur mesure, des concepts et des conceptions de niche.
+            </p>
+            
+            <p className="text-lg font-light text-gray-700 leading-relaxed">
+              Les services de signature RJA Collection dans les propriétés sont gérés par RJA Management Holding SA, une structure indépendante, qui fournit des services de gestion et opérationnels aux clients ultra-fortunés (UHNW) qui viennent investir.
+            </p>
+            
+            <p className="text-lg font-light text-gray-700 leading-relaxed">
+              Ces services comprennent des expériences personnalisées et des services d'hospitalité inégalés qui répondent aux besoins et aux demandes des investisseurs les plus exigeants au monde. Les offres "cinq étoiles plus" et les retraites sur mesure font partie de la marque signature RJA Collection.
+            </p>
           </motion.div>
         </div>
       </section>
@@ -295,9 +361,10 @@ const HomePage = () => {
             </button>
           </motion.div>
         </div>
-      </section>
-    </>
-  );
-};
+              </section>
+
+      </div>
+    );
+  };
 
 export default HomePage;

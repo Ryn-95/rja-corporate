@@ -3,27 +3,24 @@ import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 
 const mainMenu = [
-  { id: 'notre-groupe', label: 'NOTRE GROUPE' },
-  { id: 'histoire', label: 'HISTOIRE' },
-  { id: 'gouvernance', label: 'GOUVERNANCE' },
-  { id: 'robbin-james-holdings', label: 'ROBBIN JAMES HOLDINGS COMPANY' },
-  { id: 'aid-holdings', label: 'AID HOLDINGS' },
-  { id: 'impact', label: 'IMPACT' },
-  { id: 'notre-futur', label: 'NOTRE FUTUR' },
-  { id: 'contact', label: 'CONTACT' }
+  { id: 'home', label: 'Home' },
+  { id: 'properties', label: 'Properties' },
+  { id: 'investors', label: 'Investors' },
+  { id: 'announcements', label: 'Announcements' },
+  { id: 'newsroom', label: 'Newsroom' },
+  { id: 'company', label: 'Company' },
+  { id: 'contact', label: 'Contact' }
 ];
 
 const secondaryMenu = [
-  { id: 'expo-osaka', label: 'EXPOSITION OSAKA 2025', hasArrow: true, featured: true },
-  { id: 'formule1', label: 'RJA x FORMULE 1®', hasArrow: true, featured: true }
+  { id: 'robbin-james-holdings', label: 'ROBBIN JAMES HOLDINGS', hasArrow: true, featured: true },
+  { id: 'aid-holdings', label: 'AID HOLDINGS', hasArrow: true, featured: true }
 ];
 
 const utilityMenu = [
-  { id: 'actionnaires', label: 'ACTIONNAIRES' },
-  { id: 'presse', label: 'PRESSE' },
-  { id: 'startups', label: 'STARTUPS & PARTENAIRES TECH' },
-  { id: 'fournisseurs', label: 'FOURNISSEURS' },
-  { id: 'espace-candidat', label: 'ESPACE CANDIDAT' }
+  { id: 'ad-hoc-disclosures', label: 'Ad Hoc Disclosures' },
+  { id: 'investors-relations', label: 'Investors Relations' },
+  { id: 'governance', label: 'Governance' }
 ];
 
 export const Header = () => {
