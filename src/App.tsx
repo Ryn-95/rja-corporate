@@ -6,6 +6,9 @@ import HomePage from './pages/Home';
 import PrestigeSecuritePage from './pages/PrestigeSecurite';
 import RobbinJamesHolding from './pages/RobbinJamesHolding';
 import AIDHoldings from './pages/AIDHoldings';
+import NotreGroupe from './pages/NotreGroupe';
+import Histoire from './pages/Histoire';
+import NotreFutur from './pages/NotreFutur';
 
 function App() {
   return (
@@ -15,6 +18,9 @@ function App() {
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/notre-groupe" element={<NotreGroupe />} />
+          <Route path="/histoire" element={<Histoire />} />
+          <Route path="/notre-futur" element={<NotreFutur />} />
           <Route path="/prestige-securite" element={<PrestigeSecuritePage />} />
           <Route path="/robbin-james-holding" element={<RobbinJamesHolding />} />
           <Route path="/aid-holdings" element={<AIDHoldings />} />

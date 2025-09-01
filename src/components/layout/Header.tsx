@@ -3,13 +3,14 @@ import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 
 const mainMenu = [
-  { id: 'home', label: 'Home' },
-  { id: 'properties', label: 'Properties' },
-  { id: 'investors', label: 'Investors' },
-  { id: 'announcements', label: 'Announcements' },
-  { id: 'newsroom', label: 'Newsroom' },
-  { id: 'company', label: 'Company' },
-  { id: 'contact', label: 'Contact' }
+  { id: 'notre-groupe', label: 'NOTRE GROUPE' },
+  { id: 'histoire', label: 'HISTOIRE' },
+  { id: 'gouvernance', label: 'GOUVERNANCE' },
+  { id: 'robbin-james-holdings', label: 'ROBBIN JAMES HOLDINGS COMPANY' },
+  { id: 'aid-holdings', label: 'AID HOLDINGS' },
+  { id: 'impact', label: 'IMPACT' },
+  { id: 'notre-futur', label: 'NOTRE FUTUR' },
+  { id: 'contact', label: 'CONTACT' }
 ];
 
 const secondaryMenu = [
@@ -342,31 +343,12 @@ export const Header = () => {
                           animate="visible"
                           exit="exit"
                         >
-                          <motion.button
-                            className="relative text-[14px] md:text-[16px] font-display tracking-wide group w-full text-left py-1 px-2 rounded-md hover:bg-gray-50 transition-colors duration-200"
-                            onHoverStart={() => !isMobile && handleMenuItemHover(item.id)}
-                            onHoverEnd={() => !isMobile && setActiveSubmenu(null)}
-                            onClick={() => handleMenuItemClick(item.id)}
-                            whileHover={!isMobile && !shouldReduceMotion ? { x: 6, scale: 1.01 } : {}}
-                            whileTap={!shouldReduceMotion ? { scale: 0.98 } : {}}
-                            transition={{ duration: shouldReduceMotion ? 0.1 : 0.2 }}
-                            aria-expanded={activeSubmenu === item.id}
+                          <Link
+                            to={`/${item.id}`}
+                            className="relative text-[14px] md:text-[16px] font-display tracking-wide group w-full text-left py-1 px-2 rounded-md hover:bg-gray-50 transition-colors duration-200 block"
+                            onClick={() => setIsMenuOpen(false)}
                           >
                             <span className="relative z-10 inline-block">{item.label}</span>
-                            {item.submenu && (
-                              <motion.span
-                                className={`inline-block ml-2 transition-all duration-200 ${
-                                  activeSubmenu === item.id ? 'opacity-100 rotate-180' : 'opacity-60 group-hover:opacity-100'
-                                }`}
-                                initial={false}
-                                animate={{ rotate: activeSubmenu === item.id ? 180 : 0 }}
-                                transition={{ duration: shouldReduceMotion ? 0.1 : 0.3 }}
-                              >
-                                <svg className="w-4 h-4 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19 9l-7 7-7-7" />
-                                </svg>
-                              </motion.span>
-                            )}
                             <AnimatePresence>
                               {item.submenu && activeSubmenu === item.id && (
                                 <motion.div
@@ -395,7 +377,7 @@ export const Header = () => {
                                 </motion.div>
                               )}
                             </AnimatePresence>
-                          </motion.button>
+                          </Link>
                         </motion.div>
                       ))}
                     </div>

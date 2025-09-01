@@ -120,7 +120,7 @@ const HomePage = () => {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {[
               {
                 title: 'Robbin James Holding Company',
@@ -133,12 +133,6 @@ const HomePage = () => {
                 subtitle: 'Société tournée vers le développement de ses filiales et de ses groupes principalement centrés sur le continent africain',
                 image: '/images/AIDholding.jpeg',
                 link: '/aid-holdings'
-              },
-              {
-                title: 'PRESTIGE SECURITE',
-                subtitle: 'Solutions de sécurité premium pour clients institutionnels et privés de haut standing',
-                image: '/images/aaic.jpeg',
-                link: '/prestige-securite'
               }
             ].map((project, index) => (
               <motion.div
