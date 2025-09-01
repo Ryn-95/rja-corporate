@@ -69,42 +69,74 @@ const HomePage = () => {
 
       {/* About Us Section - Style Ultima Capital */}
       <section className="py-24 bg-white">
-        <div className="container max-w-4xl mx-auto">
-          <motion.div
-            className="text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-5xl font-light mb-16 text-black" style={{ fontFamily: 'serif' }}>
-              About Us
-            </h2>
-            <div className="space-y-8 text-lg leading-relaxed text-gray-700">
-              <p className="text-xl font-light">
-                Une société de participation suisse spécialisée dans le développement et la gestion d'un portefeuille diversifié d'actifs de haute qualité dans des secteurs stratégiques.
-              </p>
-              <p className="font-light">
-                Nos activités commerciales comprennent la détention directe ou indirecte à long terme d'entreprises de prestige, situées en Europe, en Afrique et dans le monde entier. Nos filiales exclusives sont destinées principalement aux investisseurs institutionnels et aux entreprises de premier plan.
-              </p>
-              <p className="font-light">
-                RJA GROUP est une holding cotée sur les marchés financiers suisses, avec une approche axée sur l'excellence opérationnelle et la croissance durable.
-              </p>
-            </div>
+        <div className="container mx-auto px-8">
+          <div className="grid grid-cols-12 gap-8">
+            {/* Colonne de gauche vide pour l'espacement */}
+            <div className="col-span-1"></div>
+            
+            {/* Contenu principal sur le côté */}
             <motion.div
-              className="mt-12"
-              initial={{ opacity: 0, y: 20 }}
+              className="col-span-5"
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
+              transition={{ duration: 0.8 }}
             >
-              <button className="bg-black text-white px-8 py-3 text-sm font-light tracking-wide hover:bg-gray-800 transition-colors duration-300">
-                Explore More
-              </button>
+              <h1 className="text-8xl font-light mb-12 text-black" style={{ 
+                fontFamily: 'serif', 
+                lineHeight: '0.9',
+                fontWeight: '300',
+                marginBottom: '3rem'
+              }}>
+                About Us
+              </h1>
+              
+              <div className="max-w-lg space-y-8">
+                <p className="text-2xl leading-relaxed text-black" style={{ 
+                  fontFamily: 'system-ui, -apple-system, sans-serif',
+                  lineHeight: '1.8',
+                  fontWeight: '400'
+                }}>
+                  AAIC est un groupe à caractère familial fondé en 2025. Il développe ses activités à travers deux holdings principales, AAA-ROBBIN JAMES HOLDINGS COMPANY, qui accompagne la croissance et l'expansion internationale de ses groupes dans le monde entier, et AID HOLDINGS, orientée vers le développement de ses groupes avec un ancrage stratégique au Moyen-Orient et en Afrique.
+                </p>
+                
+                <p className="text-2xl leading-relaxed text-black" style={{ 
+                  fontFamily: 'system-ui, -apple-system, sans-serif',
+                  lineHeight: '1.8',
+                  fontWeight: '400'
+                }}>
+                  À travers ces deux holdings, AAIC Group s'impose comme un acteur stratégique, animé par la volonté de bâtir un groupe solide, international et durable, contribuant activement à la croissance économique mondiale tout en renforçant son rôle au Moyen-Orient et en Afrique.
+                </p>
+                
+                {/* Bouton Explore More - Style Ultima Capital */}
+                <motion.div
+                  className="mt-12"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.8 }}
+                >
+                  <button 
+                    className="bg-black text-white px-8 py-3 text-sm font-light tracking-wider hover:bg-gray-800 transition-all duration-300 transform hover:scale-105"
+                    style={{ 
+                      fontFamily: 'system-ui, -apple-system, sans-serif',
+                      letterSpacing: '0.1em'
+                    }}
+                    onClick={() => navigate('/notre-groupe')}
+                  >
+                    Découvrez nos holdings
+                  </button>
+                </motion.div>
+              </div>
             </motion.div>
-          </motion.div>
+            
+            {/* Colonne de droite vide */}
+            <div className="col-span-6"></div>
+          </div>
         </div>
       </section>
+
+
 
       {/* Properties Section - Style Ultima Capital */}
       <section className="py-24 bg-gray-50">
@@ -116,7 +148,7 @@ const HomePage = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-light mb-8 text-black" style={{ fontFamily: 'serif' }}>
-              Our Portfolio
+              Découvrez nos holdings, Explorez nos groupes et leurs filiales
             </h2>
           </motion.div>
 
@@ -173,7 +205,7 @@ const HomePage = () => {
             transition={{ delay: 0.4 }}
           >
             <button className="bg-black text-white px-8 py-3 text-sm font-light tracking-wide hover:bg-gray-800 transition-colors duration-300">
-              Explore More
+              Explorez nos groupes et leurs filiales
             </button>
           </motion.div>
         </div>
@@ -232,38 +264,51 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* RJA Collection Signature Service - Style Ultima */}
+      {/* AAIC Group Overview - Style Ultima */}
       <section className="py-24 bg-white">
-        <div className="container max-w-6xl mx-auto">
+        <div className="container max-w-7xl mx-auto">
           <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            className="grid lg:grid-cols-2 gap-16 items-center"
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl font-light mb-8 text-black" style={{ fontFamily: 'serif' }}>
-              RJA Collection Signature<br />Service
-            </h2>
-          </motion.div>
-
-          <motion.div
-            className="max-w-4xl mx-auto space-y-8 text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
-            <p className="text-lg font-light text-gray-700 leading-relaxed">
-              RJA GROUP SA acquiert et fournit des services de participation de haut niveau qui constituent une alternative aux investissements traditionnels et se caractérisent généralement par un niveau de confidentialité plus élevé, une proposition de service sur mesure, des concepts et des conceptions de niche.
-            </p>
+            {/* Image à gauche */}
+            <motion.div
+              className="relative aspect-[4/3] overflow-hidden"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <img
+                src="/images/aaiccard.jpeg"
+                alt="AAIC - Groupe familial international"
+                className="object-cover w-full h-full"
+              />
+            </motion.div>
             
-            <p className="text-lg font-light text-gray-700 leading-relaxed">
-              Les services de signature RJA Collection dans les propriétés sont gérés par RJA Management Holding SA, une structure indépendante, qui fournit des services de gestion et opérationnels aux clients ultra-fortunés (UHNW) qui viennent investir.
-            </p>
-            
-            <p className="text-lg font-light text-gray-700 leading-relaxed">
-              Ces services comprennent des expériences personnalisées et des services d'hospitalité inégalés qui répondent aux besoins et aux demandes des investisseurs les plus exigeants au monde. Les offres "cinq étoiles plus" et les retraites sur mesure font partie de la marque signature RJA Collection.
-            </p>
+            {/* Contenu à droite */}
+            <motion.div
+              className="space-y-6"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <p className="text-lg font-light text-gray-700 leading-relaxed">
+                AAIC est un groupe à caractère familiale, détenu par AAA–ROBBIN JAMES HOLDINGS COMPANY et AID HOLDINGS. Héritier d'une tradition entrepreneuriale solide, le groupe s'appuie sur une vision long terme et une gouvernance responsable, alliant héritage familial et envergure internationale.
+              </p>
+              
+              <p className="text-lg font-light text-gray-700 leading-relaxed">
+                Portée par AAA–ROBBIN JAMES HOLDINGS COMPANY, AAIC déploie ses activités à travers le monde, consolidant sa présence sur des marchés stratégiques et diversifiés. En parallèle, AID Holdings se distingue par son rôle moteur au Moyen-Orient et en Afrique, où il développe des initiatives majeures et contribue activement au dynamisme économique de ces régions.
+              </p>
+              
+              <p className="text-lg font-light text-gray-700 leading-relaxed">
+                AAIC se définit ainsi comme une plateforme familiale mondiale, capable de conjuguer stabilité, discrétion et innovation, tout en offrant à ses partenaires et investisseurs des solutions exclusives et durables.
+              </p>
+            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -316,8 +361,8 @@ const HomePage = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=1200&h=900&fit=crop"
-                alt="Philosophie d'investissement - Analyse financière et stratégie"
+                src="/images/dubai.jpeg"
+                alt="Dubaï - Nos activités internationales et développement au Moyen-Orient"
                 className="object-cover w-full h-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
