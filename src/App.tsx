@@ -9,6 +9,7 @@ import AIDHoldings from './pages/AIDHoldings';
 import NotreGroupe from './pages/NotreGroupe';
 import Histoire from './pages/Histoire';
 import NotreFutur from './pages/NotreFutur';
+import Gouvernance from './pages/Gouvernance';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/notre-groupe" element={<NotreGroupe />} />
           <Route path="/histoire" element={<Histoire />} />
+          <Route path="/gouvernance" element={<Gouvernance />} />
           <Route path="/notre-futur" element={<NotreFutur />} />
           <Route path="/prestige-securite" element={<PrestigeSecuritePage />} />
           <Route path="/robbin-james-holding" element={<RobbinJamesHolding />} />

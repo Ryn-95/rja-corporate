@@ -22,8 +22,9 @@ module.exports = {
         'overlay': 'rgba(0,0,0,0.4)'
       },
       fontFamily: {
-        'sans': ['Louis Vuitton Web', 'Helvetica Neue', 'Arial', 'sans-serif'],
-        'display': ['Louis Vuitton Web', 'Helvetica Neue', 'Arial', 'sans-serif']
+        'sans': ['"Cormorant Garamond"', '"EB Garamond"', 'Garamond', '"Times New Roman"', 'serif'],
+        'display': ['"Cormorant Garamond"', '"EB Garamond"', 'Garamond', '"Times New Roman"', 'serif'],
+        'profile': ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif']
       },
       fontSize: {
         'nav': ['14px', '1.4'],

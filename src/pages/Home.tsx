@@ -67,72 +67,89 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* About Us Section - Style Ultima Capital */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-8">
-          <div className="grid grid-cols-12 gap-8">
-            {/* Colonne de gauche vide pour l'espacement */}
-            <div className="col-span-1"></div>
+      {/* About Us Section - Aligné à gauche */}
+      <section className="py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-8">
+          <motion.div
+            className="max-w-5xl"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            {/* Titre About Us - aligné à gauche */}
+            <h1 style={{ 
+              fontSize: '120px',
+              fontFamily: '"Playfair Display", "Crimson Text", "Cormorant Garamond", Georgia, serif',
+              fontWeight: '300',
+              lineHeight: '0.85',
+              marginBottom: '4rem',
+              color: '#000000',
+              letterSpacing: '-0.02em',
+              textAlign: 'left'
+            }}>
+              About Us
+            </h1>
             
-            {/* Contenu principal sur le côté */}
-            <motion.div
-              className="col-span-5"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-8xl font-light mb-12 text-black" style={{ 
-                fontFamily: 'serif', 
-                lineHeight: '0.9',
-                fontWeight: '300',
-                marginBottom: '3rem'
+            {/* Contenu texte - aligné à gauche */}
+            <div className="space-y-10">
+              <p style={{ 
+                fontSize: '22px',
+                fontFamily: '"Cormorant Garamond", "EB Garamond", Garamond, "Times New Roman", serif',
+                lineHeight: '1.6',
+                fontWeight: '400',
+                color: '#000000',
+                marginBottom: '2rem',
+                textAlign: 'left'
               }}>
-                About Us
-              </h1>
+                AAIC est un groupe à caractère familial fondé en 2025. Il développe ses activités à travers deux holdings principales, AAA-ROBBIN JAMES HOLDINGS COMPANY, qui accompagne la croissance et l'expansion internationale de ses groupes dans le monde entier, et AID HOLDINGS, orientée vers le développement de ses groupes avec un ancrage stratégique au Moyen-Orient et en Afrique.
+              </p>
               
-              <div className="max-w-lg space-y-8">
-                <p className="text-2xl leading-relaxed text-black" style={{ 
-                  fontFamily: 'system-ui, -apple-system, sans-serif',
-                  lineHeight: '1.8',
-                  fontWeight: '400'
-                }}>
-                  AAIC est un groupe à caractère familial fondé en 2025. Il développe ses activités à travers deux holdings principales, AAA-ROBBIN JAMES HOLDINGS COMPANY, qui accompagne la croissance et l'expansion internationale de ses groupes dans le monde entier, et AID HOLDINGS, orientée vers le développement de ses groupes avec un ancrage stratégique au Moyen-Orient et en Afrique.
-                </p>
-                
-                <p className="text-2xl leading-relaxed text-black" style={{ 
-                  fontFamily: 'system-ui, -apple-system, sans-serif',
-                  lineHeight: '1.8',
-                  fontWeight: '400'
-                }}>
-                  À travers ces deux holdings, AAIC Group s'impose comme un acteur stratégique, animé par la volonté de bâtir un groupe solide, international et durable, contribuant activement à la croissance économique mondiale tout en renforçant son rôle au Moyen-Orient et en Afrique.
-                </p>
-                
-                {/* Bouton Explore More - Style Ultima Capital */}
-                <motion.div
-                  className="mt-12"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.8 }}
+              <p style={{ 
+                fontSize: '22px',
+                fontFamily: '"Cormorant Garamond", "EB Garamond", Garamond, "Times New Roman", serif',
+                lineHeight: '1.6',
+                fontWeight: '400',
+                color: '#000000',
+                textAlign: 'left'
+              }}>
+                À travers ces deux holdings, AAIC Group s'impose comme un acteur stratégique, animé par la volonté de bâtir un groupe solide, international et durable, contribuant activement à la croissance économique mondiale tout en renforçant son rôle au Moyen-Orient et en Afrique.
+              </p>
+              
+              {/* Bouton aligné à gauche */}
+              <motion.div
+                className="mt-16 text-left"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+              >
+                <button 
+                  onClick={() => navigate('/notre-groupe')}
+                  style={{ 
+                    backgroundColor: '#000000',
+                    color: '#ffffff',
+                    padding: '12px 24px',
+                    fontSize: '14px',
+                    fontFamily: '"Inter", "Source Sans Pro", system-ui, sans-serif',
+                    fontWeight: '500',
+                    letterSpacing: '0.05em',
+                    border: 'none',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.backgroundColor = '#333333';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.backgroundColor = '#000000';
+                  }}
                 >
-                  <button 
-                    className="bg-black text-white px-8 py-3 text-sm font-light tracking-wider hover:bg-gray-800 transition-all duration-300 transform hover:scale-105"
-                    style={{ 
-                      fontFamily: 'system-ui, -apple-system, sans-serif',
-                      letterSpacing: '0.1em'
-                    }}
-                    onClick={() => navigate('/notre-groupe')}
-                  >
-                    Découvrez nos holdings
-                  </button>
-                </motion.div>
-              </div>
-            </motion.div>
-            
-            {/* Colonne de droite vide */}
-            <div className="col-span-6"></div>
-          </div>
+                  Découvrez nos holdings
+                </button>
+              </motion.div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -147,7 +164,7 @@ const HomePage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-light mb-8 text-black" style={{ fontFamily: 'serif' }}>
+            <h2 className="text-4xl font-light mb-8 text-black" style={{ fontFamily: '"Cormorant Garamond", "EB Garamond", Garamond, "Times New Roman", serif' }}>
               Découvrez nos holdings, Explorez nos groupes et leurs filiales
             </h2>
           </motion.div>
@@ -211,57 +228,22 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Holdings Section */}
-      <section className="py-32">
-        <div className="container">
-          <motion.div
-            className="grid lg:grid-cols-2 gap-16 items-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            {/* Image à gauche */}
-            <motion.div
-              className="relative aspect-[4/3] overflow-hidden rounded-lg"
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <img
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&h=900&fit=crop"
-                alt="Holdings - Bureaux internationaux modernes"
-                className="object-cover w-full h-full"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-            </motion.div>
-            
-            {/* Contenu à droite */}
-            <motion.div
-              className="space-y-8"
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              <h2 className="text-title">Nos Holdings</h2>
-              <p className="text-xl leading-relaxed text-gray-700">
-                Nos deux sociétés holdings, à travers lesquelles vous pouvez découvrir nos différents groupes et filiales. ROBBIN JAMES HOLDINGS COMPANY regroupe nos activités internationales, tandis que AID HOLDINGS est tournée vers le développement de nos sociétés et de nos groupes en Afrique.
-              </p>
-              <div className="grid grid-cols-2 gap-6 pt-4">
-                <div className="p-6 bg-gray-50 rounded-lg">
-                  <h3 className="font-semibold text-lg mb-2">ROBBIN JAMES HOLDINGS</h3>
-                  <p className="text-sm text-gray-600">Activités internationales</p>
-                </div>
-                <div className="p-6 bg-gray-50 rounded-lg">
-                  <h3 className="font-semibold text-lg mb-2">AID HOLDINGS</h3>
-                  <p className="text-sm text-gray-600">Développement en Afrique</p>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-        </div>
+      {/* Grande Image Dubaï Section */}
+      <section className="py-0">
+        <motion.div
+          className="relative w-full h-screen overflow-hidden"
+          initial={{ opacity: 0, scale: 1.1 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2 }}
+        >
+          <img
+            src="/images/dubai.jpeg"
+            alt="Dubaï - Vision internationale AAIC Group"
+            className="object-cover w-full h-full"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20" />
+        </motion.div>
       </section>
 
       {/* AAIC Group Overview - Style Ultima */}
@@ -283,7 +265,7 @@ const HomePage = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <img
-                src="/images/aaiccard.jpeg"
+                src="/images/dubai.jpeg"
                 alt="AAIC - Groupe familial international"
                 className="object-cover w-full h-full"
               />
@@ -361,8 +343,8 @@ const HomePage = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <img
-                src="/images/dubai.jpeg"
-                alt="Dubaï - Nos activités internationales et développement au Moyen-Orient"
+                src="/images/aaiccard.jpeg"
+                alt="AAIC - Notre philosophie d'investissement et vision stratégique"
                 className="object-cover w-full h-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />

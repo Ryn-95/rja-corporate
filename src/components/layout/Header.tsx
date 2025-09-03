@@ -3,6 +3,7 @@ import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 
 const mainMenu = [
+  { id: '', label: 'ACCUEIL' },
   { id: 'notre-groupe', label: 'NOTRE GROUPE' },
   { id: 'histoire', label: 'HISTOIRE' },
   { id: 'gouvernance', label: 'GOUVERNANCE' },
@@ -344,7 +345,7 @@ export const Header = () => {
                           exit="exit"
                         >
                           <Link
-                            to={`/${item.id}`}
+                            to={item.id === '' ? '/' : `/${item.id}`}
                             className="relative text-[14px] md:text-[16px] font-display tracking-wide group w-full text-left py-1 px-2 rounded-md hover:bg-gray-50 transition-colors duration-200 block"
                             onClick={() => setIsMenuOpen(false)}
                           >
