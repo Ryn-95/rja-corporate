@@ -50,11 +50,11 @@ export const ProfileBar = ({ data, className = '' }: ProfileBarProps) => {
         borderTop: '1px solid rgba(255,255,255,0.1)'
       }}
     >
-      <div className="flex w-full h-full items-stretch">
+      <div className="flex w-full h-full items-center">
         {/* Fondateur & CEO Section */}
-        <div className="flex-1 px-3 py-4 border-r border-white/15 flex flex-col justify-center min-w-0">
+        <div className="flex-1 px-3 py-5 border-r border-white/15 flex flex-col justify-center min-w-0">
           <div 
-            className="text-white/60 font-light mb-1" 
+            className="text-white/60 font-light mb-2" 
             style={{ fontSize: '10px', letterSpacing: '0.5px' }}
           >
             {data.founder.label}
@@ -68,7 +68,7 @@ export const ProfileBar = ({ data, className = '' }: ProfileBarProps) => {
         </div>
 
         {/* Groupe Section */}
-        <div className="flex-1 px-3 py-4 border-r border-white/15 flex flex-col justify-center min-w-0">
+        <div className="flex-1 px-3 py-5 border-r border-white/15 flex flex-col justify-center min-w-0">
           <div 
             className="text-white/60 font-light mb-1" 
             style={{ fontSize: '10px', letterSpacing: '0.5px' }}
@@ -90,7 +90,7 @@ export const ProfileBar = ({ data, className = '' }: ProfileBarProps) => {
         </div>
 
         {/* Expérience Section */}
-        <div className="flex-1 px-3 py-4 border-r border-white/15 flex flex-col justify-center min-w-0">
+        <div className="flex-1 px-3 py-5 border-r border-white/15 flex flex-col justify-center min-w-0">
           <div 
             className="text-white/60 font-light mb-1" 
             style={{ fontSize: '10px', letterSpacing: '0.5px' }}
@@ -112,7 +112,7 @@ export const ProfileBar = ({ data, className = '' }: ProfileBarProps) => {
         </div>
 
         {/* Siège Social Section */}
-        <div className="flex-1 px-3 py-4 border-r border-white/15 flex flex-col justify-center min-w-0">
+        <div className="flex-1 px-3 py-5 border-r border-white/15 flex flex-col justify-center min-w-0">
           <div 
             className="text-white/60 font-light mb-1" 
             style={{ fontSize: '10px', letterSpacing: '0.5px' }}
@@ -134,7 +134,7 @@ export const ProfileBar = ({ data, className = '' }: ProfileBarProps) => {
         </div>
 
         {/* Secteur Section */}
-        <div className="flex-1 px-3 py-4 border-r border-white/15 flex flex-col justify-center min-w-0">
+        <div className="flex-1 px-3 py-5 border-r border-white/15 flex flex-col justify-center min-w-0">
           <div 
             className="text-white/60 font-light mb-1" 
             style={{ fontSize: '10px', letterSpacing: '0.5px' }}
@@ -158,23 +158,23 @@ export const ProfileBar = ({ data, className = '' }: ProfileBarProps) => {
         </div>
 
         {/* Statut Section */}
-        <div className="flex-1 px-4 py-4 flex flex-col justify-center min-w-0">
+        <div className="flex-1 px-3 py-5 flex flex-col justify-center min-w-0">
           <div 
             className="text-white/60 font-light mb-1" 
-            style={{ fontSize: '11px', letterSpacing: '0.5px' }}
+            style={{ fontSize: '10px', letterSpacing: '0.5px' }}
           >
             {data.status.label}
           </div>
           <div 
             className="text-white font-normal truncate" 
-            style={{ fontSize: '13px', lineHeight: '1.3' }}
+            style={{ fontSize: '12px', lineHeight: '1.2' }}
           >
             {data.status.value}
           </div>
           {data.status.subtext && (
             <div 
               className="text-white/50 font-light truncate" 
-              style={{ fontSize: '10px' }}
+              style={{ fontSize: '9px' }}
             >
               {data.status.subtext}
             </div>

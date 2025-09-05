@@ -70,15 +70,15 @@ const Histoire = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <p className="text-xl text-gray-800 leading-relaxed">
+            <p className="text-xl text-gray-800 leading-relaxed" style={{ textAlign: 'justify' }}>
               Robbin James AGOH dirige le Groupe depuis 2025 et en est l'actionnaire majoritaire avec une vision claire : faire de RJA GROUP le leader mondial de l'excellence. Regroupement inédit de marques emblématiques, RJA GROUP est une entreprise unique au monde qui n'a cessé de se déployer depuis sa création.
             </p>
             
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-700 leading-relaxed" style={{ textAlign: 'justify' }}>
               Un développement qui s'est dans un premier temps appuyé sur le renforcement de son portefeuille de marques avec l'acquisition de Maisons, qui ont toutes bénéficié du savoir-faire de RJA GROUP : les faire grandir dans le respect de leur identité. Toutes partagent la même conviction : pour être désirables, leurs produits doivent être durables. C'est pourquoi RJA GROUP a toujours veillé à ce que leur fabrication respecte les plus hauts standards éthiques, environnementaux et sociaux.
             </p>
             
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-700 leading-relaxed" style={{ textAlign: 'justify' }}>
               Dès la création du Groupe, l'art et la culture constituent un axe structurant de développement. Il porte les valeurs de savoir-faire, d'excellence, de créativité de nos Maisons en les inscrivant pleinement dans leur environnement artistique, culturel et social. Initiée par Robbin James AGOH en 2025, la Fondation RJA GROUP, qui a ouvert ses portes au public en 2025, marque l'aboutissement des actions engagées par le Groupe et ses Maisons en la matière.
             </p>
           </motion.div>

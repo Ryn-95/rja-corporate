@@ -70,11 +70,11 @@ const NotreGroupe = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <p className="text-xl text-gray-800 leading-relaxed">
+            <p className="text-xl text-gray-800 leading-relaxed" style={{ textAlign: 'justify' }}>
               AAIC GROUP est un groupe à caractère familial fondé en 2025. Il a pour mission d'assurer le développement à long terme de chacune de ses holdings, de leurs groupes ainsi que leurs filiales, dans le respect de ce qui fait leur singularité et leur force, en valorisant leurs compétences propres, leur culture d'entreprise et leur savoir-faire.
             </p>
             
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-700 leading-relaxed" style={{ textAlign: 'justify' }}>
               AAIC GROUP s'engage à accompagner chacune de ses holdings, de leurs groupes et filiales, afin de stimuler leur innovation, renforcer leur performance et assurer une croissance durable, tout en préservant leur identité et leur autonomie.
             </p>
           </motion.div>
@@ -203,10 +203,10 @@ const NotreGroupe = () => {
               <h3 className="text-3xl font-semibold mb-4 tracking-wide">
                 AID <em className="italic">HOLDINGS</em>
               </h3>
-              <p className="text-gray-700 leading-relaxed text-lg">
+              <p className="text-gray-700 leading-relaxed text-lg" style={{ textAlign: 'justify' }}>
                 AID HOLDINGS se positionne comme un groupe familial dédié au développement stratégique et durable de ses holdings et filiales. Sa mission consiste à accompagner chaque société dans l'optimisation de ses compétences et de ses talents, tout en respectant sa culture et ses valeurs propres.
               </p>
-              <p className="text-gray-700 leading-relaxed text-lg mt-6">
+              <p className="text-gray-700 leading-relaxed text-lg mt-6" style={{ textAlign: 'justify' }}>
                 AID HOLDINGS encourage l'innovation, soutient la performance et favorise une croissance durable, en veillant à ce que chaque entité conserve sa singularité et son autonomie.
               </p>
             </motion.div>

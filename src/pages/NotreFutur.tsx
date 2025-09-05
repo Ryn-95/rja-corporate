@@ -70,15 +70,15 @@ const NotreFutur = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <p className="text-xl text-gray-800 leading-relaxed">
+            <p className="text-xl text-gray-800 leading-relaxed" style={{ textAlign: 'justify' }}>
               À l'horizon, AAIC GROUP se projette comme un acteur incontournable du développement durable et de l'innovation, porté par la vision de ROBBIN JAMES HOLDINGS COMPANY et AID HOLDINGS. Nous imaginons un futur où chacune de nos holdings et filiales continue de grandir tout en conservant son identité unique, son savoir-faire et sa culture propre.
             </p>
             
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-700 leading-relaxed" style={{ textAlign: 'justify' }}>
               Notre ambition est de créer un écosystème dynamique où l'innovation est au service de la performance et de la croissance durable. Nous souhaitons investir dans des technologies et des pratiques responsables, renforcer les compétences de nos équipes et encourager des collaborations fructueuses au sein de nos groupes.
             </p>
             
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-700 leading-relaxed" style={{ textAlign: 'justify' }}>
               Dans les années à venir, AAIC GROUP s'engage à accompagner ses entreprises partenaires vers l'excellence, à stimuler leur créativité et à construire des modèles de développement flexibles et résilients. Notre futur est celui d'un groupe solide et visionnaire, capable de concilier succès économique, responsabilité sociale et préservation des valeurs qui font notre force.
             </p>
           </motion.div>

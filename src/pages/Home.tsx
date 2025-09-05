@@ -42,7 +42,7 @@ const HomePage = () => {
   const navigate = useNavigate();
 
       return (
-    <div className="pb-24">
+    <div className="pb-24 overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative min-h-screen">
         <motion.div
@@ -67,11 +67,11 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* About Us Section - Aligné à gauche */}
+      {/* About Us Section - Bloc centré avec texte aligné à gauche */}
       <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-8">
           <motion.div
-            className="max-w-5xl"
+            className="max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -79,7 +79,7 @@ const HomePage = () => {
           >
             {/* Titre About Us - aligné à gauche */}
             <h1 style={{ 
-              fontSize: '120px',
+              fontSize: '60px',
               fontFamily: '"Playfair Display", "Crimson Text", "Cormorant Garamond", Georgia, serif',
               fontWeight: '300',
               lineHeight: '0.85',
@@ -91,34 +91,34 @@ const HomePage = () => {
               About Us
             </h1>
             
-            {/* Contenu texte - aligné à gauche */}
+            {/* Contenu texte - bloc centré mais texte aligné à gauche */}
             <div className="space-y-10">
               <p style={{ 
-                fontSize: '22px',
+                fontSize: '20px',
                 fontFamily: '"Cormorant Garamond", "EB Garamond", Garamond, "Times New Roman", serif',
                 lineHeight: '1.6',
                 fontWeight: '400',
                 color: '#000000',
                 marginBottom: '2rem',
-                textAlign: 'left'
+                textAlign: 'justify'
               }}>
                 AAIC est un groupe à caractère familial fondé en 2025. Il développe ses activités à travers deux holdings principales, AAA-ROBBIN JAMES HOLDINGS COMPANY, qui accompagne la croissance et l'expansion internationale de ses groupes dans le monde entier, et AID HOLDINGS, orientée vers le développement de ses groupes avec un ancrage stratégique au Moyen-Orient et en Afrique.
               </p>
               
               <p style={{ 
-                fontSize: '22px',
+                fontSize: '20px',
                 fontFamily: '"Cormorant Garamond", "EB Garamond", Garamond, "Times New Roman", serif',
                 lineHeight: '1.6',
                 fontWeight: '400',
                 color: '#000000',
-                textAlign: 'left'
+                textAlign: 'justify'
               }}>
                 À travers ces deux holdings, AAIC Group s'impose comme un acteur stratégique, animé par la volonté de bâtir un groupe solide, international et durable, contribuant activement à la croissance économique mondiale tout en renforçant son rôle au Moyen-Orient et en Afrique.
               </p>
               
-              {/* Bouton aligné à gauche */}
+              {/* Bouton centré */}
               <motion.div
-                className="mt-16 text-left"
+                className="mt-16 text-center"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -279,15 +279,15 @@ const HomePage = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <p className="text-lg font-light text-gray-700 leading-relaxed">
+              <p className="text-lg font-light text-gray-700 leading-relaxed" style={{ textAlign: 'justify' }}>
                 AAIC est un groupe à caractère familiale, détenu par AAA–ROBBIN JAMES HOLDINGS COMPANY et AID HOLDINGS. Héritier d'une tradition entrepreneuriale solide, le groupe s'appuie sur une vision long terme et une gouvernance responsable, alliant héritage familial et envergure internationale.
               </p>
               
-              <p className="text-lg font-light text-gray-700 leading-relaxed">
+              <p className="text-lg font-light text-gray-700 leading-relaxed" style={{ textAlign: 'justify' }}>
                 Portée par AAA–ROBBIN JAMES HOLDINGS COMPANY, AAIC déploie ses activités à travers le monde, consolidant sa présence sur des marchés stratégiques et diversifiés. En parallèle, AID Holdings se distingue par son rôle moteur au Moyen-Orient et en Afrique, où il développe des initiatives majeures et contribue activement au dynamisme économique de ces régions.
               </p>
               
-              <p className="text-lg font-light text-gray-700 leading-relaxed">
+              <p className="text-lg font-light text-gray-700 leading-relaxed" style={{ textAlign: 'justify' }}>
                 AAIC se définit ainsi comme une plateforme familiale mondiale, capable de conjuguer stabilité, discrétion et innovation, tout en offrant à ses partenaires et investisseurs des solutions exclusives et durables.
               </p>
             </motion.div>
